@@ -12,6 +12,7 @@ iPlugGen::iPlugGen(const InstanceInfo& info)
   for (int i = 0; i< num_params(); i++) {
     ParamInfo* p = gen->params+i;
     
+//    JUST PLAYING BUT KNOW IT WONT WORK
     GetParam(rate)->InitDouble("rate", 0.1, 0.f, 5.f, 0.01);
 //    GetParam(i)->InitDouble(p->name, p->defaultvalue, p->outputmin, p->outputmax, 0.00001, p->units);
 //    GetParam(i)->InitDouble(<#const char *name#>, <#double defaultVal#>, <#double minVal#>, <#double maxVal#>, <#double step#>)
