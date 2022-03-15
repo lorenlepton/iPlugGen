@@ -529,7 +529,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 223.0, 413.0, 37.0, 22.0 ],
+									"patching_rect" : [ 223.0, 448.0, 37.0, 22.0 ],
 									"text" : "out 1"
 								}
 
@@ -556,7 +556,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 283.0, 413.0, 37.0, 22.0 ],
+									"patching_rect" : [ 283.0, 448.0, 37.0, 22.0 ],
 									"text" : "out 2"
 								}
 
@@ -771,7 +771,7 @@
 ,
 					"patching_rect" : [ 165.0, 196.0, 148.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "hd:/Users/lepton/Developer/iPlug2/Soket/Gener/"
+						"exportfolder" : "hd:/Users/lepton/Developer/iPlug2/TEStING/iPlugGen/"
 					}
 ,
 					"text" : "gen~ @title gen_exported"

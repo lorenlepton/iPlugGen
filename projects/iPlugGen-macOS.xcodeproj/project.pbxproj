@@ -317,6 +317,10 @@
 		B885CBC52304AE7300D73128 /* IPlugProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F61A8202807B9003F2573 /* IPlugProcessor.cpp */; };
 		B8E22A0C220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8E22A0A220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp */; };
 		B8E22A0D220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B8E22A0A220268C4007CBF4C /* IPlugVST3_ProcessorBase.cpp */; };
+		C491099227E1182600F75510 /* genlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C491099127E1182600F75510 /* genlib.cpp */; };
+		C491099327E1183D00F75510 /* gen_exported.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C42BF7EA27DFA1D200029921 /* gen_exported.cpp */; };
+		C491099527E11A5600F75510 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C491099427E11A5500F75510 /* json_builder.c */; };
+		C491099727E11A6100F75510 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C491099627E11A6100F75510 /* json.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -785,6 +789,9 @@
 		C42BF7E827DFA1D100029921 /* gen_exported.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gen_exported.h; path = ../gen_exported.h; sourceTree = "<group>"; };
 		C42BF7E927DFA1D200029921 /* gen_dsp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = gen_dsp; path = ../gen_dsp; sourceTree = "<group>"; };
 		C42BF7EA27DFA1D200029921 /* gen_exported.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gen_exported.cpp; path = ../gen_exported.cpp; sourceTree = "<group>"; };
+		C491099127E1182600F75510 /* genlib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = genlib.cpp; path = ../gen_dsp/genlib.cpp; sourceTree = "<group>"; };
+		C491099427E11A5500F75510 /* json_builder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = json_builder.c; path = ../gen_dsp/json_builder.c; sourceTree = "<group>"; };
+		C491099627E11A6100F75510 /* json.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = json.c; path = ../gen_dsp/json.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -861,6 +868,9 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
+				C491099627E11A6100F75510 /* json.c */,
+				C491099427E11A5500F75510 /* json_builder.c */,
+				C491099127E1182600F75510 /* genlib.cpp */,
 				52FBBED30D0CF143001C8B8A /* config.h */,
 				4F3862EE2014BBEC0009F402 /* iPlugGen.h */,
 				4F3862ED2014BBEC0009F402 /* iPlugGen.cpp */,
@@ -2460,6 +2470,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C491099727E11A6100F75510 /* json.c in Sources */,
+				C491099527E11A5600F75510 /* json_builder.c in Sources */,
+				C491099227E1182600F75510 /* genlib.cpp in Sources */,
+				C491099327E1183D00F75510 /* gen_exported.cpp in Sources */,
 				B885CBC52304AE7300D73128 /* IPlugProcessor.cpp in Sources */,
 				4F10D3D9203A6719003EF82A /* RtMidi.cpp in Sources */,
 				4F6369DD20A464BB0022C370 /* IGraphicsNanoVG_src.m in Sources */,
