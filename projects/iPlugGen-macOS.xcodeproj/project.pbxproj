@@ -321,6 +321,14 @@
 		C491099327E1183D00F75510 /* gen_exported.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C42BF7EA27DFA1D200029921 /* gen_exported.cpp */; };
 		C491099527E11A5600F75510 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C491099427E11A5500F75510 /* json_builder.c */; };
 		C491099727E11A6100F75510 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C491099627E11A6100F75510 /* json.c */; };
+		C4B34C0327E14D55009E2359 /* genlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C491099127E1182600F75510 /* genlib.cpp */; };
+		C4B34C0427E14D58009E2359 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C491099427E11A5500F75510 /* json_builder.c */; };
+		C4B34C0527E14D5B009E2359 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C491099627E11A6100F75510 /* json.c */; };
+		C4B34C0627E15455009E2359 /* gen_exported.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C42BF7EA27DFA1D200029921 /* gen_exported.cpp */; };
+		C4B34C0727E15461009E2359 /* gen_exported.h in Sources */ = {isa = PBXBuildFile; fileRef = C42BF7E827DFA1D100029921 /* gen_exported.h */; };
+		C4B34C0927E15518009E2359 /* genlib.h in Sources */ = {isa = PBXBuildFile; fileRef = C4B34C0827E15517009E2359 /* genlib.h */; };
+		C4B34C0A27E15526009E2359 /* genlib.h in Sources */ = {isa = PBXBuildFile; fileRef = C4B34C0827E15517009E2359 /* genlib.h */; };
+		C4B34C0B27E15566009E2359 /* gen_dsp in Sources */ = {isa = PBXBuildFile; fileRef = C42BF7E927DFA1D200029921 /* gen_dsp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -792,6 +800,7 @@
 		C491099127E1182600F75510 /* genlib.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = genlib.cpp; path = ../gen_dsp/genlib.cpp; sourceTree = "<group>"; };
 		C491099427E11A5500F75510 /* json_builder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = json_builder.c; path = ../gen_dsp/json_builder.c; sourceTree = "<group>"; };
 		C491099627E11A6100F75510 /* json.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = json.c; path = ../gen_dsp/json.c; sourceTree = "<group>"; };
+		C4B34C0827E15517009E2359 /* genlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = genlib.h; path = ../gen_dsp/genlib.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -868,6 +877,7 @@
 		089C166AFE841209C02AAC07 /* IPlugExample */ = {
 			isa = PBXGroup;
 			children = (
+				C4B34C0827E15517009E2359 /* genlib.h */,
 				C491099627E11A6100F75510 /* json.c */,
 				C491099427E11A5500F75510 /* json_builder.c */,
 				C491099127E1182600F75510 /* genlib.cpp */,
@@ -2268,6 +2278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B34C0B27E15566009E2359 /* gen_dsp in Sources */,
+				C4B34C0A27E15526009E2359 /* genlib.h in Sources */,
+				C4B34C0627E15455009E2359 /* gen_exported.cpp in Sources */,
+				C4B34C0527E14D5B009E2359 /* json.c in Sources */,
+				C4B34C0427E14D58009E2359 /* json_builder.c in Sources */,
+				C4B34C0327E14D55009E2359 /* genlib.cpp in Sources */,
 				4F03A5AF20A4621100EBDFFB /* IGraphics.cpp in Sources */,
 				4F6369E020A464BB0022C370 /* IGraphicsNanoVG_src.m in Sources */,
 				4F6369EE20A466470022C370 /* IControl.cpp in Sources */,
@@ -2470,9 +2486,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B34C0727E15461009E2359 /* gen_exported.h in Sources */,
 				C491099727E11A6100F75510 /* json.c in Sources */,
 				C491099527E11A5600F75510 /* json_builder.c in Sources */,
 				C491099227E1182600F75510 /* genlib.cpp in Sources */,
+				C4B34C0927E15518009E2359 /* genlib.h in Sources */,
 				C491099327E1183D00F75510 /* gen_exported.cpp in Sources */,
 				B885CBC52304AE7300D73128 /* IPlugProcessor.cpp in Sources */,
 				4F10D3D9203A6719003EF82A /* RtMidi.cpp in Sources */,

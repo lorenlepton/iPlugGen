@@ -4,11 +4,12 @@
 #include "gen_exported.h"
 #include "gen_dsp/genlib.h"
 
-const int kNumPresets = 1;
+const int kNumPresets = 4;
 
 enum EParams
 {
-  kGain = 0,
+  fb = 0,
+  centre = 0,
   depth = 0,
   rate = 0,
   kNumParams
