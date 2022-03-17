@@ -16,4 +16,10 @@ Uses input 1, **careful of feedback**. `feedback` set it `50%`.<br>Currently onl
 
 No other support has been done for AU/VST/etc... yet. i plan to fix this, or if you do, please do a pull request 🤘
 
+To Do: 
+ - [x] macOS app
+ - [ ] VST2/3
+ - [ ] Audio Unit 2/3
+ - [ ] AAX
+
 Many thanks go to [Oli Larkin](https://github.com/olilarkin) & [Alex Harker](https://github.com/AlexHarker) for the help 🖤
