@@ -26,7 +26,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #include "gen_dsp/genlib_exportfunctions.h"
 #include "gen_dsp/genlib_ops.h"
 
-namespace gen_exported {
+namespace gen_flanger {
 
 int num_inputs();
 int num_outputs();
@@ -46,4 +46,4 @@ short setstate(CommonState *cself, const char *state);
 void *create(t_param sr, long vs);
 void destroy(CommonState *cself);
 
-} // gen_exported::
+} // gen_flanger::

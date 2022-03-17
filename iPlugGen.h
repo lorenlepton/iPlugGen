@@ -1,8 +1,8 @@
 #pragma once
 
 #include "IPlug_include_in_plug_hdr.h"
-#include "gen_exported.h"
-#include "gen_dsp/genlib.h"
+#include "gen_flanger.h"
+#include "genlib.h"
 
 const int kNumPresets = 4;
 
@@ -17,7 +17,7 @@ enum EParams
 
 using namespace iplug;
 using namespace igraphics;
-using namespace gen_exported;
+using namespace gen_flanger;
 
 class iPlugGen final : public Plugin
 {

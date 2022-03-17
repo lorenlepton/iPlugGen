@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>iPlugGen</string>
 	<key>CFBundleGetInfoString</key>
-	<string>iPlugGen v1.0.0 Copyright 2020 iPlugGen Inc</string>
+	<string>iPlugGen v1.0.0 Copyright 2022 iPlugGen Inc</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.Working.vst3.iPlugGen</string>
 	<key>CFBundleInfoDictionaryVersion</key>

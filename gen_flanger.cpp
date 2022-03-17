@@ -1,6 +1,6 @@
-#include "gen_exported.h"
+#include "gen_flanger.h"
 
-namespace gen_exported {
+namespace gen_flanger {
 
 /*******************************************************************************************************************
 Cycling '74 License for Max-Generated Code for Export
@@ -40,19 +40,19 @@ typedef struct State {
 	int __exception;
 	int vectorsize;
 	t_sample m_rate_1;
-	t_sample m_fb_2;
+	t_sample m_depth_2;
 	t_sample samplerate;
-	t_sample m_centre_4;
-	t_sample m_depth_3;
+	t_sample m_fb_4;
+	t_sample m_centre_3;
 	// re-initialize all member variables;
 	inline void reset(t_param __sr, int __vs) {
 		__exception = 0;
 		vectorsize = __vs;
 		samplerate = __sr;
 		m_rate_1 = ((t_sample)0.1);
-		m_fb_2 = ((t_sample)0.5);
-		m_depth_3 = ((int)150);
-		m_centre_4 = ((int)500);
+		m_depth_2 = ((int)150);
+		m_centre_3 = ((int)500);
+		m_fb_4 = ((t_sample)0.5);
 		m_delay_5.reset("m_delay_5", ((int)4410));
 		__m_cycle_6.reset(samplerate, 0);
 		__m_cycle_7.reset(samplerate, 0);
@@ -73,26 +73,26 @@ typedef struct State {
 			return __exception;
 			
 		};
-		t_sample mul_23 = (m_rate_1 * ((t_sample)1.31));
+		t_sample mul_5 = (m_rate_1 * ((t_sample)1.31));
 		// the main sample loop;
 		while ((__n--)) {
 			const t_sample in1 = (*(__in1++));
 			__m_cycle_6.freq(m_rate_1);
-			t_sample cycle_31 = __m_cycle_6(__sinedata);
-			t_sample cycleindex_32 = __m_cycle_6.phase();
-			t_sample mul_29 = (cycle_31 * m_depth_3);
-			t_sample add_30 = (mul_29 + m_centre_4);
-			__m_cycle_7.freq(mul_23);
-			t_sample cycle_27 = __m_cycle_7(__sinedata);
-			t_sample cycleindex_28 = __m_cycle_7.phase();
-			t_sample mul_25 = (cycle_27 * m_depth_3);
-			t_sample add_26 = (mul_25 + m_centre_4);
-			t_sample tap_34 = m_delay_5.read_linear(add_30);
-			t_sample tap_35 = m_delay_5.read_linear(add_26);
-			t_sample out2 = (tap_35 + in1);
-			t_sample out1 = (tap_34 + in1);
-			t_sample mul_21 = (tap_34 * m_fb_2);
-			m_delay_5.write((mul_21 + in1));
+			t_sample cycle_13 = __m_cycle_6(__sinedata);
+			t_sample cycleindex_14 = __m_cycle_6.phase();
+			t_sample mul_11 = (cycle_13 * m_depth_2);
+			t_sample add_12 = (mul_11 + m_centre_3);
+			__m_cycle_7.freq(mul_5);
+			t_sample cycle_9 = __m_cycle_7(__sinedata);
+			t_sample cycleindex_10 = __m_cycle_7.phase();
+			t_sample mul_7 = (cycle_9 * m_depth_2);
+			t_sample add_8 = (mul_7 + m_centre_3);
+			t_sample tap_16 = m_delay_5.read_linear(add_12);
+			t_sample tap_17 = m_delay_5.read_linear(add_8);
+			t_sample out2 = (tap_17 + in1);
+			t_sample out1 = (tap_16 + in1);
+			t_sample mul_3 = (tap_16 * m_fb_4);
+			m_delay_5.write((mul_3 + in1));
 			m_delay_5.step();
 			// assign results to output buffer;
 			(*(__out1++)) = out1;
@@ -105,14 +105,14 @@ typedef struct State {
 	inline void set_rate(t_param _value) {
 		m_rate_1 = (_value < 0.01 ? 0.01 : (_value > 5 ? 5 : _value));
 	};
-	inline void set_fb(t_param _value) {
-		m_fb_2 = (_value < 0 ? 0 : (_value > 0.999 ? 0.999 : _value));
-	};
 	inline void set_depth(t_param _value) {
-		m_depth_3 = (_value < 10 ? 10 : (_value > 300 ? 300 : _value));
+		m_depth_2 = (_value < 10 ? 10 : (_value > 300 ? 300 : _value));
 	};
 	inline void set_centre(t_param _value) {
-		m_centre_4 = (_value < 10 ? 10 : (_value > 1000 ? 1000 : _value));
+		m_centre_3 = (_value < 10 ? 10 : (_value > 1000 ? 1000 : _value));
+	};
+	inline void set_fb(t_param _value) {
+		m_fb_4 = (_value < 0 ? 0 : (_value > 0.999 ? 0.999 : _value));
 	};
 	
 } State;
@@ -169,9 +169,9 @@ void setparameter(CommonState *cself, long index, t_param value, void *ref) {
 void getparameter(CommonState *cself, long index, t_param *value) {
 	State *self = (State *)cself;
 	switch (index) {
-		case 0: *value = self->m_centre_4; break;
-		case 1: *value = self->m_depth_3; break;
-		case 2: *value = self->m_fb_2; break;
+		case 0: *value = self->m_centre_3; break;
+		case 1: *value = self->m_depth_2; break;
+		case 2: *value = self->m_fb_4; break;
 		case 3: *value = self->m_rate_1; break;
 		
 		default: break;
@@ -255,11 +255,11 @@ void *create(t_param sr, long vs) {
 	self->__commonstate.vs = vs;
 	self->__commonstate.params = (ParamInfo *)genlib_sysmem_newptr(4 * sizeof(ParamInfo));
 	self->__commonstate.numparams = 4;
-	// initialize parameter 0 ("m_centre_4")
+	// initialize parameter 0 ("m_centre_3")
 	pi = self->__commonstate.params + 0;
 	pi->name = "centre";
 	pi->paramtype = GENLIB_PARAMTYPE_FLOAT;
-	pi->defaultvalue = self->m_centre_4;
+	pi->defaultvalue = self->m_centre_3;
 	pi->defaultref = 0;
 	pi->hasinputminmax = false;
 	pi->inputmin = 0;
@@ -269,11 +269,11 @@ void *create(t_param sr, long vs) {
 	pi->outputmax = 1000;
 	pi->exp = 0;
 	pi->units = "";		// no units defined
-	// initialize parameter 1 ("m_depth_3")
+	// initialize parameter 1 ("m_depth_2")
 	pi = self->__commonstate.params + 1;
 	pi->name = "depth";
 	pi->paramtype = GENLIB_PARAMTYPE_FLOAT;
-	pi->defaultvalue = self->m_depth_3;
+	pi->defaultvalue = self->m_depth_2;
 	pi->defaultref = 0;
 	pi->hasinputminmax = false;
 	pi->inputmin = 0;
@@ -283,11 +283,11 @@ void *create(t_param sr, long vs) {
 	pi->outputmax = 300;
 	pi->exp = 0;
 	pi->units = "";		// no units defined
-	// initialize parameter 2 ("m_fb_2")
+	// initialize parameter 2 ("m_fb_4")
 	pi = self->__commonstate.params + 2;
 	pi->name = "fb";
 	pi->paramtype = GENLIB_PARAMTYPE_FLOAT;
-	pi->defaultvalue = self->m_fb_2;
+	pi->defaultvalue = self->m_fb_4;
 	pi->defaultref = 0;
 	pi->hasinputminmax = false;
 	pi->inputmin = 0;
@@ -325,4 +325,4 @@ void destroy(CommonState *cself) {
 }
 
 
-} // gen_exported::
+} // gen_flanger::
