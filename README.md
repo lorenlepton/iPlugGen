@@ -12,13 +12,17 @@ Uses input 1, **careful of feedback**. `feedback` set it `50%`.<br>Currently onl
 
 ![macOS app](/image/iPlugGen_app.webp)
 
+Working VST3 version
+
+![VST3](/image/iPlugGen_VST3.webp)
+
 ---
 
 No other support has been done for AU/VST/etc... yet. i plan to fix this, or if you do, please do a pull request 🤘
 
 To Do: 
  - [x] macOS app
- - [ ] VST2/3
+ - [x] VST3 [cant do VST2]
  - [ ] Audio Unit 2/3
  - [ ] AAX
 

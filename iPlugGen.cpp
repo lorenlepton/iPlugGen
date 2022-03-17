@@ -3,9 +3,9 @@
 #include "IControls.h"
 
 iPlugGen::iPlugGen(const InstanceInfo& info) : Plugin(info, MakeConfig(num_params(), kNumPresets)){
-  gen = (CommonState *)create(44100.f, DEFAULT_BLOCK_SIZE);
+  gen = (CommonState *)gen_flanger::create(44100.f, DEFAULT_BLOCK_SIZE);
   
-  for (int i = 0; i < num_params(); i++) {
+  for (int i = 0; i < gen_flanger::num_params(); i++) {
     ParamInfo* param = gen->params+i;
     GetParam(i)->InitDouble(param->name, param->defaultvalue, param->outputmin, param->outputmax, 0.01, param->units);
   }
@@ -23,10 +23,9 @@ iPlugGen::iPlugGen(const InstanceInfo& info) : Plugin(info, MakeConfig(num_param
     const IRECT bound = pGraphics->GetBounds();
     const IRECT cell = bound.GetGridCell(1, 1, 1);
     
-    for (int i = 0; i < num_params(); i++) {
+    for (int i = 0; i < gen_flanger::num_params(); i++) {
       ParamInfo* param = gen->params+i;
-      pGraphics->AttachControl(new IVKnobControl(cell
-                                                 .GetGridCell(i, 1, 4), i, param->name));
+      pGraphics->AttachControl(new IVKnobControl(cell.GetGridCell(i, 1, 4), i, param->name));
     }
   };
 #endif
@@ -34,15 +33,15 @@ iPlugGen::iPlugGen(const InstanceInfo& info) : Plugin(info, MakeConfig(num_param
 
 #if IPLUG_DSP
 void iPlugGen::ProcessBlock(sample** inputs, sample** outputs, int nFrames){
-  perform(gen, inputs, num_inputs(), outputs, num_outputs(), nFrames);
+  gen_flanger::perform(gen, inputs, gen_flanger::num_inputs(), outputs, gen_flanger::num_outputs(), nFrames);
 }
 #endif
 
 void iPlugGen::OnReset(){
   gen->sr = GetSampleRate();
-  reset(gen);
+  gen_flanger::reset(gen);
 }
 
 void iPlugGen::OnParamChange(int paramIdx){
-  setparameter(gen, paramIdx, GetParam(paramIdx)->Value(), 0);
+  gen_flanger::setparameter(gen, paramIdx, GetParam(paramIdx)->Value(), 0);
 }

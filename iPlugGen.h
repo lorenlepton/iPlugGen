@@ -2,7 +2,7 @@
 
 #include "IPlug_include_in_plug_hdr.h"
 #include "gen_flanger.h"
-#include "genlib.h"
+#include "gen_dsp/genlib.h"
 
 const int kNumPresets = 4;
 
