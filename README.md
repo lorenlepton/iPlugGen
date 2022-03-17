@@ -18,12 +18,11 @@ Working VST3 version
 
 ---
 
-No other support has been done for AU/VST/etc... yet. i plan to fix this, or if you do, please do a pull request 🤘
-
 To Do: 
  - [x] macOS app
  - [x] VST3 [cant do VST2]
  - [ ] Audio Unit 2/3
+ - [ ] windows app
  - [ ] AAX
 
 Many thanks go to [Oli Larkin](https://github.com/olilarkin) & [Alex Harker](https://github.com/AlexHarker) for the help 🖤
