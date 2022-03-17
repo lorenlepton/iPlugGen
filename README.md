@@ -1,7 +1,7 @@
 # iPlugGen~ for iPlug2
 
 Load gen~ code as an iPlug2 effect
-Basic flanger effect made with [Cycling74's gen`~`](https://docs.cycling74.com/max8/vignettes/gen_topic), updated from [original iPlug1 version](https://github.com/uniphonic/IPlugGen)
+Basic flanger effect made with [Cycling74's gen~](https://docs.cycling74.com/max8/vignettes/gen_topic), updated from [original iPlug1 version](https://github.com/uniphonic/IPlugGen)
 
 ![gen~](/image/iPlugGen_max_flanger.webp)
 
