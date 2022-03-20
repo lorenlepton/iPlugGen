@@ -335,18 +335,17 @@
 		C4171B2527E3F8D800B20CA4 /* genlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1B27E3F88100B20CA4 /* genlib.cpp */; };
 		C4171B2627E3F8DB00B20CA4 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1F27E3F8A700B20CA4 /* json_builder.c */; };
 		C4171B2727E3F8DF00B20CA4 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B2127E3F8B000B20CA4 /* json.c */; };
-		C4171B2827E3F91900B20CA4 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B2127E3F8B000B20CA4 /* json.c */; };
-		C4171B2927E3F91C00B20CA4 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1F27E3F8A700B20CA4 /* json_builder.c */; };
-		C4171B2A27E3F91F00B20CA4 /* genlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1B27E3F88100B20CA4 /* genlib.cpp */; };
 		C4171B2B27E3FE0000B20CA4 /* genlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1B27E3F88100B20CA4 /* genlib.cpp */; };
 		C4171B2C27E3FE0300B20CA4 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1F27E3F8A700B20CA4 /* json_builder.c */; };
 		C4171B2D27E3FE0600B20CA4 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B2127E3F8B000B20CA4 /* json.c */; };
 		C4171B2E27E3FE6100B20CA4 /* gen_flanger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C7501C27E2AE6B006B6103 /* gen_flanger.cpp */; };
-		C4171B2F27E3FE6600B20CA4 /* genlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1B27E3F88100B20CA4 /* genlib.cpp */; };
-		C4171B3027E3FE6900B20CA4 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1F27E3F8A700B20CA4 /* json_builder.c */; };
-		C4171B3127E3FE6C00B20CA4 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B2127E3F8B000B20CA4 /* json.c */; };
+		C4171B4A27E4049900B20CA4 /* iPlugGen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F3862ED2014BBEC0009F402 /* iPlugGen.cpp */; };
+		C473FEE027E7DD3E00AE0E40 /* gen_flanger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C7501C27E2AE6B006B6103 /* gen_flanger.cpp */; };
+		C473FEE427E7E46400AE0E40 /* gen_flanger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C7501C27E2AE6B006B6103 /* gen_flanger.cpp */; };
+		C473FEE527E7E46D00AE0E40 /* genlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1B27E3F88100B20CA4 /* genlib.cpp */; };
+		C473FEE627E7E47300AE0E40 /* json_builder.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B1F27E3F8A700B20CA4 /* json_builder.c */; };
+		C473FEE727E7E47900AE0E40 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = C4171B2127E3F8B000B20CA4 /* json.c */; };
 		C4C7501E27E2AEBD006B6103 /* gen_flanger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C7501C27E2AE6B006B6103 /* gen_flanger.cpp */; };
-		C4D7B15A27E36E70005FBA80 /* gen_flanger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C7501C27E2AE6B006B6103 /* gen_flanger.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2295,10 +2294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4171B2A27E3F91F00B20CA4 /* genlib.cpp in Sources */,
-				C4171B2927E3F91C00B20CA4 /* json_builder.c in Sources */,
-				C4171B2827E3F91900B20CA4 /* json.c in Sources */,
-				C4D7B15A27E36E70005FBA80 /* gen_flanger.cpp in Sources */,
+				C473FEE427E7E46400AE0E40 /* gen_flanger.cpp in Sources */,
+				C4171B4A27E4049900B20CA4 /* iPlugGen.cpp in Sources */,
 				4F78BE3222E7429B00AD537E /* IPlugAUv3Appex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2307,6 +2304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3862F22014BBEC0009F402 /* iPlugGen.cpp in Sources */,
 				C4171B2227E3F8B000B20CA4 /* json.c in Sources */,
 				C4171B2027E3F8A700B20CA4 /* json_builder.c in Sources */,
 				C4171B1C27E3F88100B20CA4 /* genlib.cpp in Sources */,
@@ -2330,7 +2328,6 @@
 				4F35DEB0207E5C5A00867D8F /* IPlugPluginBase.cpp in Sources */,
 				4F78D95C13B63BA50032E0F3 /* IPlugParameter.cpp in Sources */,
 				4FB1F58C20E4B006004157C8 /* IGraphicsMac.mm in Sources */,
-				4F3862F22014BBEC0009F402 /* iPlugGen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2338,9 +2335,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4171B3127E3FE6C00B20CA4 /* json.c in Sources */,
-				C4171B3027E3FE6900B20CA4 /* json_builder.c in Sources */,
-				C4171B2F27E3FE6600B20CA4 /* genlib.cpp in Sources */,
 				C4171B2E27E3FE6100B20CA4 /* gen_flanger.cpp in Sources */,
 				4F3EE1C2231438D000004786 /* IPlugProcessor.cpp in Sources */,
 				4F3EE1C3231438D000004786 /* RtMidi.cpp in Sources */,
@@ -2383,6 +2377,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C473FEE727E7E47900AE0E40 /* json.c in Sources */,
+				C473FEE627E7E47300AE0E40 /* json_builder.c in Sources */,
+				C473FEE527E7E46D00AE0E40 /* genlib.cpp in Sources */,
+				C473FEE027E7DD3E00AE0E40 /* gen_flanger.cpp in Sources */,
 				4F78BE1422E7406D00AD537E /* iPlugGen.h in Sources */,
 				4F0D965C23099F6900BFDED0 /* IPlugProcessor.cpp in Sources */,
 				4F78BE1522E7406D00AD537E /* iPlugGen.cpp in Sources */,

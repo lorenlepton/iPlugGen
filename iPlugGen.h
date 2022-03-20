@@ -6,8 +6,7 @@
 
 const int kNumPresets = 4;
 
-enum EParams
-{
+enum EParams {
   fb = 0,
   centre = 0,
   depth = 0,
@@ -19,8 +18,7 @@ using namespace iplug;
 using namespace igraphics;
 using namespace gen_flanger;
 
-class iPlugGen final : public Plugin
-{
+class iPlugGen final : public Plugin {
 public:
   iPlugGen(const InstanceInfo& info);
 //  ~IPlugGen();
